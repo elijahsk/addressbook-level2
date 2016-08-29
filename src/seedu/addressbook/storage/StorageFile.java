@@ -42,7 +42,13 @@ public class StorageFile {
             super(message);
         }
     }
-
+    
+    public static class NoFileFoundException extends Exception {
+    	public NoFileFoundException(String message){
+    		super(message);
+    	}
+    }
+    
     private final JAXBContext jaxbContext;
 
     public final Path path;
